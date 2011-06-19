@@ -1,0 +1,4 @@
+MAC-ANONYMITY is a WICD script, it features changing MAC to random when connecting to public hotspot or unknown network.
+
+Requirements: WICD, MACCHANGER
+License: GPLv3
