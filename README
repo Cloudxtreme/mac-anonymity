@@ -2,3 +2,17 @@ MAC-ANONYMITY is a WICD script, it features changing MAC to random when connecti
 
 Requirements: WICD, MACCHANGER
 License: GPLv3
+
+=== Installation:
+Copy these files:
+ etc/mac-anonymity to /etc/mac-anonymity
+ etc/wicd/scripts/preconnect/mac-anonymity.sh to /etc/wicd/scripts/preconnect/mac-anonymity.sh
+
+Now edit /etc/mac-anonymity with your favorite editor and setup two variables.
+ HOME_NETWORK_MAC - MAC adress of your home network (router), you can get MAC with iwlist wlan0 scan command
+ IDENTIFY_TO_HOME_NETWORK - Your computer's wireless card MAC adress, ifconfig wlan0 will give you MAC adress of your card
+
+The script will change your wireless card's MAC adress to random when you will connect to diffrent network than specified in 
+/etc/mac-anonymity
+
+Your original MAC will be restored when you will attempt to connect to your home network specified in /etc/mac-anonymity.
