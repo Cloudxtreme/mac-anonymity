@@ -2,6 +2,8 @@
 import getopt, sys, os
 import ConfigParser as configparser
 
+# Fixed commit
+
 """ MAC-Anonymity is very simple script for WICD which changes your MAC when you are connecting to selected network """
 
 def main():
