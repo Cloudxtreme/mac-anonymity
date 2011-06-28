@@ -66,7 +66,7 @@ def main():
         else:
             print "Unknown network: Changing MAC adress to "+Parser.get("settings", "default_mac_for_unknown_networks")+" on "+Interface+" interface"
             os.system("ifconfig wlan0 down")
-            os.system("macchanger -m "+Parser.get("settings", "default_mac_for_unknown_networks")+" "+Interface)
+            os.system("macchanger -m "+Parser.get("settings", "default_mac_for_unknown_networks").replace("-", ":")+" "+Interface)
             os.system("ifconfig wlan0 up")
     
 if __name__ == "__main__":
