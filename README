@@ -4,15 +4,10 @@ Requirements: WICD, MACCHANGER
 License: GPLv3
 
 === Installation:
-Copy these files:
- etc/mac-anonymity to /etc/mac-anonymity
- etc/wicd/scripts/preconnect/mac-anonymity.sh to /etc/wicd/scripts/preconnect/mac-anonymity.sh
+  Copy /etc to root directory "/" (first remember to see what are you copying - ls ./ -R)
 
-Now edit /etc/mac-anonymity with your favorite editor and setup two variables.
- HOME_NETWORK_MAC - MAC adress of your home network (router), you can get MAC with iwlist wlan0 scan command
- IDENTIFY_TO_HOME_NETWORK - Your computer's wireless card MAC adress, ifconfig wlan0 will give you MAC adress of your card
+  Edit /etc/mac-anonymity.conf and add your trusted network - at left side MAC adress or name of your network, and at right side you'r original MAC adress.
+  In settings section you can set default MAC adress for all unknown networks, it can be constant or random.
+  MAC-Anonymity is disabled by default because you must first add your network to use MAC-Anonymity to after these steps done you can enable this plugin by setting up "enabled" variable to "True" (without "" - ")
 
-The script will change your wireless card's MAC adress to random when you will connect to diffirent network than specified in 
-/etc/mac-anonymity
-
-Your original MAC will be restored when you will attempt to connect to your home network specified in /etc/mac-anonymity.
+  From the autor: I hope this plugin will be useful for you, thank you for using it.
