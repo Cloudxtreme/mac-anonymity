@@ -2,8 +2,6 @@
 import getopt, sys, os
 import ConfigParser as configparser
 
-# Fixed commit
-
 """ MAC-Anonymity is very simple script for WICD which changes your MAC when you are connecting to selected network """
 
 def main():
@@ -45,11 +43,15 @@ def main():
         sys.exit(0)
 
     for Item in Items:
+        AP = Item.replace("-", ":")
+
         # Will change mac if found a network
-        if Item == args[1] or Item == args[2]:
-            print "Network recognized: Changing MAC to "+Parser.get("change_mac", Item)+" on "+Interface+" interface"
+        if AP.lower() == args[1].lower() or AP.lower() == args[2].lower():
+            Destination = Parser.get("change_mac", Item).replace("-", ":")
+
+            print "Network recognized: Changing MAC to "+Destination+" on "+Interface+" interface"
             os.system("ifconfig wlan0 down")
-            os.system("macchanger -m \""+Parser.get("change_mac", Item)+"\" "+Interface)
+            os.system("macchanger -m \""+Destination+"\" "+Interface)
             os.system("ifconfig wlan0 up")
 
             found = True
