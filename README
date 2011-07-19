@@ -11,3 +11,7 @@ License: GPLv3
   MAC-Anonymity is disabled by default because you must first add your network to use MAC-Anonymity to after these steps done you can enable this plugin by setting up "enabled" variable to "True" (without "" - ")
 
   From the autor: I hope this plugin will be useful for you, thank you for using it.
+
+Changelog:
+19.07.2011:
+    + Started changelog
