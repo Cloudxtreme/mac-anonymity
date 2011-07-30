@@ -13,5 +13,8 @@ License: GPLv3
   From the autor: I hope this plugin will be useful for you, thank you for using it.
 
 Changelog:
-19.07.2011:
+30.07.2011 (v.1.1):
+    * Changed Python version from python2 to python
+
+19.07.2011 (v.1.0):
     + Started changelog
